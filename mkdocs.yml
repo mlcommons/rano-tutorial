@@ -1,0 +1,91 @@
+site_name: Tutorial for RANO
+site_url: https://medperf.com/
+repo_url: https://github.com/writechoiceorg/rano-tutorial
+repo_name: writechoiceorg/rano-tutorial
+nav:
+- Overview: overview.md
+- Clinical Problem Definition: clinical_problem_definition.md
+- Setup: setup.md
+- Data Curation: data_curation.md
+- Account Creation: account_creation.md
+- Data Preparation: data_preparation.md
+
+# - Code Reference: reference/
+theme: 
+  features:
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.annotate
+  icon:
+    admonition:
+      note: octicons/tag-16
+      abstract: octicons/checklist-16
+      info: octicons/info-16
+      tip: octicons/squirrel-16
+      success: octicons/check-16
+      question: octicons/question-16
+      warning: octicons/alert-16
+      failure: octicons/x-circle-16
+      danger: octicons/zap-16
+      bug: octicons/bug-16
+      example: octicons/beaker-16
+      quote: octicons/quote-16
+  name: material
+  logo: assets/logo.png
+  palette:
+    - media: "(prefers-color-scheme: light)" 
+      scheme: default
+      primary: teal
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)" 
+      scheme: slate
+      primary: teal
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+
+
+plugins:
+  - search
+  - macros
+  - literate-nav:
+      nav_file: SUMMARY.md
+      
+extra:
+  analytics:
+    provider: google
+    property: G-QNE8JMYY88
+    
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/thumb-up-outline
+          name: This page was helpful
+          data: 1
+          note: >-
+            Thanks for your feedback!
+        - icon: material/thumb-down-outline
+          name: This page could be improved
+          data: 0
+          note: >- 
+            Thanks for your feedback! Help us improve this page by
+            using our <a href="https://github.com/mlcommons/medperf/issues/new?title=[Feedback]+{title}+-+{url}" target="_blank" rel="noopener">feedback form</a>.
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets:
+      check_paths: true
+  - pymdownx.superfences
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - toc:
+      permalink: True
+  - attr_list
